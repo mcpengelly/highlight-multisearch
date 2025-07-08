@@ -5,7 +5,7 @@ function updateContextMenu() {
       console.log("Text selected:", selection);
       chrome.runtime.connect({ name: "contextUpdater" }).postMessage({
         action: "updateContextMenu",
-        selectionText: selection
+        selectionText: selection,
       });
     } catch (error) {
       console.warn("Extension context invalidated. Retrying...");

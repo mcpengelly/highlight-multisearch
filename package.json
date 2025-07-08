@@ -7,10 +7,22 @@
   "license": "MIT",
   "scripts": {
     "publish": "npx bestzip multisearch-highlight.zip extension",
-    "prepublish": "rm -f multisearch-highlight.zip"
+    "prepublish": "rm -f multisearch-highlight.zip",
+    "build": "vite build",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "prettify": "prettier --write ."
   },
   "devDependencies": {
-    "bestzip": "^2.2.0"
+    "bestzip": "^2.2.0",
+    "jest": "^30.0.4",
+    "prettier": "^3.6.2",
+    "vite": "^7.0.3",
+    "vite-plugin-static-copy": "^3.1.0"
   },
-  "keywords": ["chrome-extension", "highlight", "search"]
+  "keywords": [
+    "chrome-extension",
+    "highlight",
+    "search"
+  ],
+  "type": "module"
 }

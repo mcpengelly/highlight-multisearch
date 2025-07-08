@@ -2,6 +2,7 @@
 node_modules/
 
 # Build artifacts
+dist/
 extension.zip
 multisearch-highlight.zip
 
@@ -15,4 +16,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # VSCode
-.vscode/ 
+.vscode/
+
+# Node version manager
+.nvmrc
+
+# Prettier/Editor config
+.prettier*
+.idea/ 

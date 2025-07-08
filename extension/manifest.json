@@ -2,11 +2,7 @@
   "manifest_version": 3,
   "name": "Highlight & Search: Maps, Wikipedia, YouTube & More",
   "version": "1.0",
-  "permissions": [
-    "contextMenus",
-    "activeTab",
-    "storage"
-  ],
+  "permissions": ["contextMenus", "activeTab", "storage"],
   "background": {
     "service_worker": "background.js"
   },
@@ -19,18 +15,14 @@
     "https://www.youtube.com/*"
   ],
   "icons": {
-    "16": "icon_16x16.png",
-    "48": "icon_48x48.png",
-    "128": "icon_128x128.png"
+    "16": "logos/icon_16x16.png",
+    "48": "logos/icon_48x48.png",
+    "128": "logos/icon_128x128.png"
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content.js"
-      ],
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
       "run_at": "document_idle"
     }
   ],

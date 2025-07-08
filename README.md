@@ -1,39 +1,37 @@
-# multisearch-highlight
+# Highlight & Search: Maps, Wikipedia, YouTube & More
 
-A Chrome extension for highlighting search results across multiple search engines.
+A Chrome extension that lets you highlight text and search it instantly on Google Maps, Wikipedia, YouTube, Amazon, and more via the right-click menu.
 
-## Structure
+## Installation & Development
 
-```
-.
-├── extension
-│   ├── content.js
-│   ├── background.js
-│   ├── options.html
-│   ├── options.js
-│   ├── manifest.json
-│   └── logos
-│       ├── icon_16x16.png
-│       ├── icon_48x48.png
-│       └── icon_128x128.png
-├── LICENSE
-├── package.json
-├── privacy-policy.md
-├── README.md
-├── test
-│   └── utils.test.js
-└── utils
-    └── utils.js
-```
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+2. **Build the extension:**
+   ```sh
+   npm run build
+   ```
 
-- `extension/` contains the Chrome extension source files.
-- `extension/logos/` contains icon assets.
-- `test/` contains placeholder for tests.
-- `utils/` contains placeholder for utility scripts.
+   - Bundled files and assets will be in the `dist/` directory.
+   - Load `dist/` as an unpacked extension in Chrome.
+3. **Run tests:**
+   ```sh
+   npm test
+   ```
 
-## Installation
+   - Uses Jest with ES module support for utility tests.
 
-1. Clone this repository.
-2. Go to `chrome://extensions` in your browser.
-3. Enable Developer Mode.
-4. Click "Load unpacked" and select the `extension/` folder.
+## Key Details & Tricky Bits
+
+- **Modern JS:** Uses ES modules (`import`/`export`) everywhere. Utilities are shared between extension scripts and tests.
+- **Bundling:** Vite bundles all extension scripts and copies static assets (manifest, icons, HTML) to `dist/`.
+- **Testing:** Jest is configured for ESM. Run tests with `npm test` (uses Node's `--experimental-vm-modules`).
+- **Node version:** Use Node 20+ (see `.nvmrc`).
+- **Vite config:** Multi-entry build for background, content, and options scripts. Static assets copied with `vite-plugin-static-copy`.
+- **Updating logic:** Refactor logic into `utils/utils.js` for easy testing and reuse.
+- **Amazon region:** Set in the options page; affects Amazon search URLs.
+
+## Quick Start
+
+- `npm install` → `npm run build` → load `dist/` in Chrome → highlight text and right-click to search!
