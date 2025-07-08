@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Highlight & Search: Maps, Wikipedia, YouTube & More",
+  "version": "1.0",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://www.alltrails.com/*",
+    "https://www.amazon.com/*",
+    "https://www.imdb.com/*",
+    "https://en.wikipedia.org/*",
+    "https://www.youtube.com/*"
+  ],
+  "icons": {
+    "16": "icon_16x16.png",
+    "48": "icon_48x48.png",
+    "128": "icon_128x128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Highlight & Search Settings",
+    "default_popup": "options.html"
+  }
+}

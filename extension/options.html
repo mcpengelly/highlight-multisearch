@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Settings - Highlight & Search: Maps, Wikipedia, YouTube & More</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+      width: 400px
+    }
+  </style>
+</head>
+
+<body>
+  <h1>&#128736; Highlight & Search - Settings</h1>
+  <hr/>
+  <h2>&#128295; Search Engines</h2>
+  <form id="engineToggles">
+    <label><input type="checkbox" id="toggleGoogleMaps"> Google Maps</label><br>
+    <label><input type="checkbox" id="toggleAllTrails"> AllTrails</label><br>
+    <label><input type="checkbox" id="toggleAmazon"> Amazon</label><br>
+    <label><input type="checkbox" id="toggleIMDB"> IMDb</label><br>
+    <label><input type="checkbox" id="toggleWikipedia"> Wikipedia</label><br>
+    <label><input type="checkbox" id="toggleYouTube"> YouTube</label><br>
+  </form>
+  <hr/>
+  <h2>&#128717; Amazon Region Selection</h2>
+  <label for="amazonRegion">Choose your Amazon domain:</label>
+  <select id="amazonRegion">
+    <option value="com">Amazon US (.com)</option>
+    <option value="ca">Amazon Canada (.ca)</option>
+    <option value="co.uk">Amazon UK (.co.uk)</option>
+    <option value="de">Amazon Germany (.de)</option>
+    <option value="fr">Amazon France (.fr)</option>
+    <option value="jp">Amazon Japan (.co.jp)</option>
+  </select>
+  <button id="save">Save</button>
+  <script src="options.js"></script>
+</body>
+
+</html>

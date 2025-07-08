@@ -1,0 +1,16 @@
+{
+  "name": "multisearch-highlight",
+  "version": "1.0.0",
+  "description": "A Chrome extension for highlighting search results across multiple search engines.",
+  "main": "extension/background.js",
+  "author": "Matt Pengelly",
+  "license": "MIT",
+  "scripts": {
+    "publish": "npx bestzip multisearch-highlight.zip extension",
+    "prepublish": "rm -f multisearch-highlight.zip"
+  },
+  "devDependencies": {
+    "bestzip": "^2.2.0"
+  },
+  "keywords": ["chrome-extension", "highlight", "search"]
+}
