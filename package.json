@@ -1,28 +1,11 @@
 {
   "name": "multisearch-highlight",
   "version": "1.0.0",
-  "description": "A Chrome extension for highlighting search results across multiple search engines.",
-  "main": "extension/background.js",
-  "author": "Matt Pengelly",
-  "license": "MIT",
+  "description": "Highlight & Search: Maps, Wikipedia, YouTube & More",
+  "main": "index.js",
   "scripts": {
-    "publish": "npx bestzip multisearch-highlight.zip extension",
-    "prepublish": "rm -f multisearch-highlight.zip",
-    "build": "vite build",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest",
-    "prettify": "prettier --write ."
+    "publish": "npx bestzip multisearch-highlight.zip extension"
   },
-  "devDependencies": {
-    "bestzip": "^2.2.0",
-    "jest": "^30.0.4",
-    "prettier": "^3.6.2",
-    "vite": "^7.0.3",
-    "vite-plugin-static-copy": "^3.1.0"
-  },
-  "keywords": [
-    "chrome-extension",
-    "highlight",
-    "search"
-  ],
-  "type": "module"
+  "author": "Matt Pengelly",
+  "license": "MIT"
 }
